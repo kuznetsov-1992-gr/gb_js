@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: chocolate;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+main{
+    background-color: darkkhaki;
+    min-height: 100vh;
+    
+}
+.goods-item{
+        padding: 30px;
+}
+p{
+   padding: 10px;
+   font-size: 25px;
+}
+h3{
+    padding: 5px;
+    color: rgba(212, 41, 126, 0.767);
+    font-size: 25px;
+    
+}
+
+
