@@ -8,7 +8,7 @@ const goods = [
 const renderGoodsItem = (titele, price, img) => `<div class="goods-item"><h3>${titele}</h3> <img src=${img} alt="photo"><p>${price} $</p> <hr></div>`;
 const renderGoodsList = (list = goods)=> {
     let goodsList = list.map((item) => renderGoodsItem(item.titele, item.price, item.img)).join('');
-    document.querySelector('.good-list').innerHTML = goodsList;
+    document.querySelector('.goods-list').innerHTML = goodsList;
     
 };
 
