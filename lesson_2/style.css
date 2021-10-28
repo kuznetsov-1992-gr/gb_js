@@ -14,7 +14,10 @@ main{
     
 }
 .goods-item{
-        padding: 30px;
+    width: 175px;
+    padding: 30px;
+    border: 2px solid black;
+
 }
 p{
    padding: 10px;
@@ -25,6 +28,22 @@ h3{
     color: rgba(212, 41, 126, 0.767);
     font-size: 25px;
     
+}
+
+.cart-list{
+    background-color: #fffccc;
+    width: 80%;
+    min-height: 400px;
+    position: absolute;
+    display: none;
+    left: 30px;
+    top: 100px;
+
+    
+}
+
+.active {
+    display: block;
 }
 
 
