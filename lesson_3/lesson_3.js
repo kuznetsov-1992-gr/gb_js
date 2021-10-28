@@ -60,7 +60,7 @@ send('http://myserver.com')
 fetch('https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json', {
     method: 'POST',
     headers: {
-        'content-type': 'application/JSON'
+        
     },
     body: JSON.stringify(data)
 })
