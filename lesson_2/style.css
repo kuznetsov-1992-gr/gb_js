@@ -6,7 +6,7 @@
     background-color: chocolate;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 main{
     background-color: darkkhaki;
