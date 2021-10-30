@@ -25,14 +25,36 @@ class GoodItem {
 class GoodList {
     constructor(cart){
         this.goods = [];
+        this.filterGoods = [];
         this.cart = cart;
         this.cartEl = document.querySelector('.cart-list');
         this.goodEl = document.querySelector('.goods-list');
         this.goodEl.addEventListener('click',this.addToCart.bind(this));
         this.visToCart = document.querySelector('.bsk');
-        this.visToCart.addEventListener('click', this.visualCart.bind(this))
+        this.visToCart.addEventListener('click', this.visualCart.bind(this));
+        this.search = document.querySelector('.goods-search');
+        this.sBtn = document.querySelector('.search-button');
+        this.sBtn.addEventListener('click', this.addFilterList.bind(this))
       
     }
+    addFilterList(){
+        const str = new RegExp (`${this.search.value}`, `i`);
+        this.filterGoods = (this.goods.filter((good) =>{
+            return str.test(good.product_name)
+        }))
+        // console.log(this.filterGoods)
+        this.render(this.filterGoods);
+    }
+
+    // choiceGoods(answer) {
+    //     if(answer.length !== 0){
+    //         // this.render(this.goods)
+    //         console.log('true')
+    //     }else{
+    //         console.log('false')
+    //         // this.render(this.filterGoods)
+    //     }
+    // }
     fetchGoods() {
         fetch(`${GB_URL}/catalogData.json`,{
             method: 'GET'
@@ -51,9 +73,9 @@ class GoodList {
         })
     }
 
-    render(){
+    render(answerFilter =this.goods){
         let listHtml = '';
-        this.goods.forEach(good =>{
+        answerFilter.forEach(good =>{
             const goodItem = new GoodItem(good.product_name, good.price, good.id_product);
             listHtml += goodItem.render();
         })
