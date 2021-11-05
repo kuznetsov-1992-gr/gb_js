@@ -1,0 +1,16 @@
+.cart-list{
+    width: 80vw;
+    height: 80vh;
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    background-color: cornsilk;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.error-element{
+    border: 3px solid red;
+    font-size: 25px;
+    padding: 20px;
+    color: red;
+}

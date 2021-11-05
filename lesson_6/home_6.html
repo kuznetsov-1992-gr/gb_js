@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home:6_Vue_Component</title>
+    
+</head>
+<body>
+    <div id="app">
+        <header>
+            
+            <input-btn v-on:filter="filterFun" ></input-btn>
+            <cart-btn v-on:oncart="visitCart"></cart-btn>
+        </header>
+        <main>
+            <goods-list :goods="filteredGoods"></goods-list>
+        </main>
+        <section>
+            <cart-list v-bind:visible-cart="visibleCart" v-if="visibleCart"></cart-list> 
+        </section>
+        <error-element v-bind:error-visible="errorVisible" v-if="errorVisible" v-bind:error="errorEl"></error-element></error-element>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="home_6.js"></script>
+</body>
+</html>
