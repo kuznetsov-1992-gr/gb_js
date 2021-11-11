@@ -117,7 +117,7 @@ Vue.component('cart-list', {
                 console.log(dataJs)
             })
 
-        }
+        },
     },
     props: ['visible-cart'],
 
